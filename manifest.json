@@ -1,0 +1,22 @@
+{
+    "manifest_version": 3,
+    "name": "MyFans 一括画像ダウンローダー",
+    "short_name": "MyFansImageDownloader",
+    "description": "MyFansに投稿されている画像を一括でダウンロードします",
+    "version": "1.0.0",
+    "icons": {
+        "128": "icon.png"
+    },
+    "host_permissions": [
+      "*://myfans.jp/"
+    ],
+    "permissions": [
+      "cookies"
+    ],
+    "content_scripts": [
+        {
+          "matches": ["https://myfans.jp/*"],
+          "js": ["libs/FileSaver.min.js","libs/jszip.min.js","download.js"]
+        }
+    ]
+}
